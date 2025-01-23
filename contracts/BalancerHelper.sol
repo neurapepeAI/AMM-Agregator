@@ -5,10 +5,11 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./interface/IBalancerPool.sol";
 import "./BalancerLib.sol";
 
-
+// The BalancerHelper contract provides utility functions for interacting with Balancer pools.
 contract BalancerHelper {
     using SafeMath for uint256;
 
+    // Returns the expected output amounts for a given input amount when swapping tokens in a Balancer pool.
     function getReturns(
         IBalancerPool pool,
         IERC20 fromToken,

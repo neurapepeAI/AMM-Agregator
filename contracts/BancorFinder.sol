@@ -5,7 +5,7 @@ import "./interface/IBancorContractRegistry.sol";
 import "./interface/IBancorConverterRegistry.sol";
 import "./UniversalERC20.sol";
 
-
+// The BancorFinder contract is used to build a path for token conversion using the Bancor protocol.
 contract BancorFinder {
     using UniversalERC20 for IERC20;
 
@@ -13,6 +13,7 @@ contract BancorFinder {
     IERC20 constant internal bnt = IERC20(0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C);
     IBancorContractRegistry constant internal bancorContractRegistry = IBancorContractRegistry(0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4);
 
+    // Builds a path for token conversion using the Bancor protocol.
     function buildBancorPath(
         IERC20 fromToken,
         IERC20 destToken
